@@ -3,7 +3,7 @@ public class addTion {
 int a=10;
 int b=10;
 int sum=a+b;
-System.out.println(sum);
+System.out.println("addtion is ="+ sum);
      }
     
 }
