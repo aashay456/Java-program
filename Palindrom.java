@@ -1,22 +1,37 @@
+
+import java.util.Scanner;
+
 public class Palindrom {
-    public static void main(String[] args) {
-        int[] num={1,2,3,2,1};
-        int i=0;
-        int j=num.length-1;
-        int flag=1;
-        int check=1;
-        while(check<=num.length /2){
-            if(num[i]!=num[j]){
-                flag=0;
-                System.out.println("not palindrom");
+
+    int n, n1, sum = 0, p;
+
+    void accept(int n) {
+        this.n = n;
+    }
+
+    String pal() {
+        p = n;
+        while (n > 0) {
+            n1 = n % 10;
+            n = n / 10;
+            sum = (sum * 10) + n1;
         }
-        i++;
-        j--;
-        check++;
+
+        if (sum == p) {
+            return "No is pal";
+        } else {
+            return "No is not pal";
+        }
     }
-    if(flag==1){
-        System.out.println("It is palindrom No");
+
+    public static void main(String[] args) {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        Palindrom s1 = new Palindrom();
+        s1.accept(n);
+        System.out.println("Number is = " + s1.pal());
+
     }
-    
-}
+
 }
