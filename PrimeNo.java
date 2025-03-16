@@ -1,40 +1,51 @@
-public class PrimeNo {
-    public static void main(String[] args) {
-        int[] nums={21,19,12,81,83,37};
-        int[] pprime = new int[3];
-        int[] nprime = new int[3];
-        int ncount=0;
-        int pcount=0;
 
-
-        for( int i=0;i<nums.length;i++){
-            int flag=1;
-            for(int j=2;j<=nums[i]/2;j++){
-                if(nums[i]%j==0){
-                    flag=0;
-                    nprime[ncount]=nums[i];
-                    ncount ++;
-                    break;
-                }
-
-            }
-        
-            if(flag==1){
-                pprime[pcount]=nums[i];
-                pcount ++;
+import java.util.Scanner;
+class PrimeNo {
+    static void prime(){
+        Scanner sc=new Scanner (System.in);
+        int n,div=0,i;
+        n=sc.nextInt();
+        for(i=2;i<n;i++){
+            if(n%i==0){
+                  div++;
             }
         }
-            System.out.println("Prime no");
-            for(int i=0;i<pprime.length;i++){
-                System.out.println(pprime[i]);
-            }
-            System.out.println("Prime no");
-            for(int i=0;i<nprime.length;i++){
-                System.out.println(nprime[i]);
-            }
-        
-        
+        if(div==0){
+            System.out.println("No is prime");
+        }
+        else{
+            System.out.println("No is not prime");
+        }
     }
-    
+    public static void main(String[] args) {
+        prime();
+    }
 }
+// import java.util.*;
 
+// class PrimeNo {
+
+//     int fun2() {
+//         int n, div = 0;
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter Number:");
+//         n = sc.nextInt();
+//         for (int i = 2; i < n; i++) {
+//             if (n % i == 0) {
+//                 div==0;
+//                 break;
+//             }
+//         }
+//         if (div == 1) 
+//             return No is prime;
+//          else 
+//             return "No is not prime";
+        
+
+//     }
+
+//     public static void main(String[] args) {
+//         String s1=fun2();
+//         System.out.println(s1);
+//     }
+// }
