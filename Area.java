@@ -1,29 +1,41 @@
-import java.util.Scanner;
+import java.util.*;
+class Area {
+//     double r;
+//     double a;
+//     Area(){
+//         r=2;
+//         a=3.14*r*r;
+//     }
+//     void display(){
+//         System.out.println("Area of circle is ="+ a);
 
-public class Area{
-    double r,A;
-    void accept(double r){
-        this.r=r;
-    }
-    double area1(){
-        A=3.14*r*r;
-        return (A);
-    }
-    public static void main(String[] args) {
-        double A,r;
-        Scanner sc= new Scanner(System.in);
-        Area s1=new Area();
-        r=sc.nextDouble();
-        s1.accept(r);
-        A=s1.area1();
+//     }
+//    public static void main(String[] args) {
+//     Area s1=new Area();
+//     s1.display();
+//    }
+//In using retrun type of an constructor
+double r;
+double a;
+Area(double r){
+    this.r=r;
 
-        System.out.println("Area"+A);
-
-        
-    }
 }
 
- 
+ double area1(){
+    a=3.14*r*r;
+    return (a);
+}
+
+public static void main(String[] args) {
+double r,a;
+Scanner sc=new Scanner (System.in);
+r=sc.nextDouble();
+
+    Area a1=new Area(r);
+    a=a1.area1();
+    System.out.println(a);
+}
 
     
-
+}

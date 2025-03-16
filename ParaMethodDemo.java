@@ -1,20 +1,20 @@
 
-import java.util.Scanner;
+import java.util.*;
 
-public class ParaMethodDemo {
+class ParaMethodDemo {
 
     int flag = 0, n1, n, x, sum = 0, p, f1 = 1, i;
 
-    void accept(int n) {
+    ParaMethodDemo(int n) {
         this.n = n;
     }
 
     void pattern() {
-
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.println("" + j);
+                System.out.print(j);
             }
+
             System.out.println();
         }
     }
@@ -62,10 +62,10 @@ public class ParaMethodDemo {
     public static void main(String[] args) {
         int n, x;
         Scanner sc = new Scanner(System.in);
-        ParaMethodDemo a1 = new ParaMethodDemo();
         System.out.println("Enter value of n");
         n = sc.nextInt();
-        a1.accept(n);
+        ParaMethodDemo a1 = new ParaMethodDemo(n);
+
         a1.pattern();
 
         a1.prime();
